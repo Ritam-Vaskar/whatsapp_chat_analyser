@@ -26,6 +26,9 @@ class TopicAnalyzer:
         return conversations, messages_df
     
     def discover_topics(self, conversations):
+        if not conversations:
+            raise ValueError("No valid conversations found for topic discovery.")
+
         topics, probabilities = self.topic_model.fit_transform(conversations)
         
         topic_info = self.topic_model.get_topic_info()

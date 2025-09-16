@@ -23,4 +23,5 @@ COPY . .
 EXPOSE 8501
 
 # Use bash -lc so $PORT expands properly. Replace app.py with your streamlit file.
-CMD ["bash", "-lc", "streamlit run app.py --server.port $PORT --server.address 0.0.0.0"]
+CMD ["bash", "-lc", "streamlit run src/app.py --server.port $PORT --server.address 0.0.0.0"]
+
