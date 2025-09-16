@@ -1,0 +1,6 @@
+# Ignore __pycache__ directory in src/feature/
+src/feature/__pycache__/
+
+# Ignore other files and directories
+*.log
+*.pyc
